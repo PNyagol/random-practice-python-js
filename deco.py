@@ -18,3 +18,5 @@ def say_hi():
     print("hi")
 
 say_hi()
+
+# The @my_decorator syntax is shorthand for: say_hi = my_decorator(say_hi)

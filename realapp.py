@@ -9,6 +9,7 @@ app.configure(bg="black")
 clock_label = Label(app, bg="black", fg="cyan", font=("Helvetica", 50), relief="raised")
 
 clock_label.place(x=20, y=20)
+
 date_label = Label(app, bg="black", fg="cyan", font=("Helvetica", 16))
 date_label.pack()
 
