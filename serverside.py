@@ -11,8 +11,9 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     
     while True:
         conn, addr = s.accept()
+        name = conn.recv(1024).decode("utf-8")
         
         with conn:
-            print(f"Connected by {addr}")
+            print(f"Connected by {addr}", name)
             connect_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S").encode()
             conn.sendall(connect_time)
