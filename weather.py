@@ -1,18 +1,18 @@
 import requests
 
-# Your API key
 API_KEY = "a0b76d29053dc145b1017bd611e21311"
 
 # Ask the user for the city
 city = input("Enter city name: ")
+print(f"Hoooray, I like {city}")
 
-# Build the API URL
+# API URL
 url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric"
 
-# Make the request
+# request
 response = requests.get(url)
 
-# Convert the response to a Python dictionary
+# response to a Python dictionary
 data = response.json()
 
 # Handle errors safely
